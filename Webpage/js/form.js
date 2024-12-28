@@ -10,22 +10,22 @@ document
     let isValid = true;
 
     if (!/^[A-Za-zÅÄÖåäö\s]+$/.test(name)) {
-      alert("Namnet får endast innehålla bokstäver och mellanslag.");
+      alert("Your name can only contain letters");
       isValid = false;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Ange en giltig e-postadress.");
+      alert("Invalid email adress, try again");
       isValid = false;
     }
 
     if (comment.length < 10 || comment.length > 500) {
-      alert("Meddelandet måste vara mellan 10 och 500 tecken.");
+      alert("The message must contain between 10 and 500 letters");
       isValid = false;
     }
 
     if (isValid) {
-      alert("Formuläret är korrekt ifyllt!");
+      alert("Everything is filled out correctly!");
 
       this.submit();
     }
