@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
+  background: linear-gradient(to bottom, #631d1d, #3f48c0);
   color: #333;
   line-height: 1.6;
 }
@@ -149,6 +149,17 @@ section p {
   text-align: center;
 }
 
+input.invalid,
+textarea.invalid {
+  border: 2px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -191,11 +202,27 @@ form textarea {
 
 /* Footer */
 footer {
-  margin-top: 30px;
+  width: 80%;
+  margin: 30px auto;
+  margin-top: 10px;
+  margin-bottom: 0%;
   padding: 20px;
   background: #333;
   color: white;
   text-align: center;
+  border-radius: 10px;
+}
+
+.bottom-text {
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 10px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+  }
 }
 
 /* Responsiv design */
