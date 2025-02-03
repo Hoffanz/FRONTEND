@@ -1,38 +1,46 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy to GitHub Pages
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: 'pages'
   cancel-in-progress: true
+
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Set up Node
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
           cache: 'npm'
+
       - name: Install dependencies
         run: npm install
-      - name: Build the project
+
+      - name: Build
         run: npm run build
-      - name: Deploy to GitHub Pages (main branch)
-        uses: peaceiris/actions-gh-pages@v3
+
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
+
+      - name: Upload dist folder to GitHub Pages
+        uses: actions/upload-pages-artifact@v1
         with:
-          folder: dist     # Specify the dist folder
-          target_branch: main  # Deploy to the main branch
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
