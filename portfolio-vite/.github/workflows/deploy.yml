@@ -20,7 +20,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
       - name: Set up Node
         uses: actions/setup-node@v3
@@ -29,10 +29,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Build
+      - name: Build the project
         run: npm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages (main branch)
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages   # Deploy till gh-pages branch
-          folder: dist       # Specify folder to deploy
+          folder: dist     # Specify the dist folder
+          target_branch: main  # Deploy to the main branch
