@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Håkansson</title>
+    <script type="module" crossorigin src="/FRONTEND/assets/index-fXWlOwM_.js"></script>
+    <link rel="stylesheet" crossorigin href="/FRONTEND/assets/index--BHw1MlK.css">
+  </head>
+
+  <header>
+    <h1>Jonathan Håkansson, junior developer</h1>
+    <nav class="navbar">
+      <ul class="navbar_list">
+        <li class="li_items">
+          <a href="#aboutme">About me</a>
+        </li>
+        <li class="li_items">
+          <a href="#skillsandknowledge">Skills and other professions</a>
+        </li>
+        <li class="li_items">
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li class="li_items">
+          <a href="#references">References</a>
+        </li>
+        <li class="li_items">
+          <a href="#contactinfo">Contact info</a>
+        </li>
+        <li class="li_items">
+          <button id="cv-section">Download my resume!</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <main>
+      <section id="aboutme">
+        <h2>Who am I?</h2>
+        <div class="aboutme-container">
+          <div class="aboutme-text">
+            <p class="aboutme">
+              Hello reader! My name is Jonathan Håkansson and im currently a
+              student at Nackademin where im studying .NET developer.
+            </p>
+            <p>
+              Before I started studying, I was working as a truckdriver for
+              somewhat close to a decade, however, I was miserable constantly
+              and felt that this line of work was not something that was meant
+              for me. I wanted to do something that I could take pride in and
+              know that what I do was helpful to people.
+            </p>
+          </div>
+          <div class="aboutme-pic">
+            <img src="/FRONTEND/assets/me-BjodJKx8.jpg" alt="Picture of me" class="profile-pic" />
+          </div>
+        </div>
+      </section>
+      <section id="skillsandknowledge">
+        <h2>My skills and knowledge</h2>
+        <p class="skillsandknowledge">
+          The courses that I have been attending to at Nackademin currently are
+          C# programming, database science and now Frontend 1.
+        </p>
+        <p>
+          There are of course many more courses, but those mentioned above are
+          those that I have decent overview knowledge about. I have no prior
+          knowledge nor have I worked as a developer before.
+        </p>
+      </section>
+      <section id="portfolio">
+        <h2>My portfolio</h2>
+        <p class="portfolio">
+          This is my portfolio where I will upload different projects that im
+          working on or have finished. Links to my social media is available
+          aswell here!
+        </p>
+        <div class="social-media">
+          <a
+            href="https://github.com/Hoffanz"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="/FRONTEND/assets/github-CcvuTvSE.png" alt="Github" class="social-icon" />
+          </a>
+          <a
+            href="https://linkedin.com/in/jonathan-håkansson-990200331"
+            target="_blank"
+            class="social-link"
+          >
+            <img src="/FRONTEND/assets/linkedin-C0DlWYmF.png" alt="LinkedIn" class="social-icon" />
+          </a>
+        </div>
+      </section>
+      <section id="references">
+        <h2>References</h2>
+        <p>References will be available upon request.</p>
+      </section>
+    </main>
+
+    <footer>
+      <section id="contactme">
+        <h2>Contact me for questions or inquries!</h2>
+      </section>
+      <form
+        id="contactForm"
+        action="https://formshow.systementor.se/"
+        method="post"
+      >
+        <p>
+          You can leave your name aswell as write to me about questions or
+          inqureis and I will get back to you asap!
+        </p>
+        <label for="name">Enter your name here:</label>
+        <input type="text" name="Name" id="name" placeholder="John Smith" />
+        <small id="nameError" class="error"></small>
+
+        <label for="email">Enter your email here:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="abc@gmail.com"
+        />
+        <small id="emailError" class="error"></small>
+
+        <textarea
+          name="comment"
+          rows="10"
+          cols="30"
+          id="comment"
+          placeholder="Write here!"
+        ></textarea>
+        <small id="commentError" class="error"></small>
+        <input type="submit" id="sendmessage" value="Send message" />
+      </form>
+      <p class="bottom-text">&copy; Jonathan Håkansson</p>
+    </footer>
+
+  </body>
+</html>

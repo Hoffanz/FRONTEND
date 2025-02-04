@@ -1,0 +1,29 @@
+{
+  "name": "frontend-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hoffanz/FRONTEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hoffanz/FRONTEND/issues"
+  },
+  "homepage": "https://Hoffanz.github.io/FRONTEND/",
+  "devDependencies": {
+    "vite": "^6.0.11",
+    "gh-pages": "^5.0.0"
+  }
+}
